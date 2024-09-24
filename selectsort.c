@@ -2,7 +2,6 @@
 // e implemente o select sort em uma função para ordenar este vetor.
 
 #include <stdio.h>
-#include <stdbool.h>
 
 void selectSort(int array[], int numElementos){
     int i, j;
