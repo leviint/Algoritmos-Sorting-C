@@ -4,10 +4,16 @@
 #include <stdio.h>
 
 void insertSort(int array[], int numElementos){
-    int i, j;
-
-    
-
+    int i, j, temp;
+    for(i = 1; i < numElementos; i++){
+        temp = array[i];
+        j = i - 1;
+        while(j >= 0 && array[j] > temp){
+            array[j + 1] = array[j];
+            j--;
+        }
+        array[j + 1] = temp;
+    }
 }
 
 int main(){
@@ -18,7 +24,7 @@ int main(){
         scanf("%d", &array[i]);
     }
 
-    selectSort(array, 6);
+    insertSort(array, 6);
 
     printf("Array ordenado com INSERT SORT: ");
     for(int i = 0; i < 6; i++){
