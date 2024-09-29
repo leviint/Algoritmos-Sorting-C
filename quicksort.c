@@ -16,6 +16,7 @@ void quickSort(int array[], int low, int high){
             j--;
         }
     }
+    
     if(low < j) quickSort(array, low, j);
     if(i < high) quickSort(array, i, high);
 }
